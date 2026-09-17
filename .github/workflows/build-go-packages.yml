@@ -23,9 +23,12 @@ on:
 jobs:
   go:
     name: Go
+    permissions:
+      contents: write
     uses: tcely/versions-package-tools/.github/workflows/build-tool-packages.yml@patch-1
     with:
       tool-name: "go"
       tool-version: ${{ inputs.VERSION || '1.19.0' }}
       publish-release: ${{ inputs.PUBLISH_RELEASES || false }}
     secrets: inherit
+    

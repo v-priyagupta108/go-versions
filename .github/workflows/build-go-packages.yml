@@ -25,7 +25,8 @@ jobs:
     name: Go
     permissions:
       contents: write
-    uses: tcely/versions-package-tools/.github/workflows/build-tool-packages.yml@patch-1
+    uses: v-priyagupta108/versions-package-tools/.github/workflows/build-tool-packages.yml@checksum-format
+
     with:
       tool-name: "go"
       tool-version: ${{ inputs.VERSION || '1.19.0' }}
